@@ -1,27 +1,29 @@
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ousabbar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/31 09:51:46 by ousabbar          #+#    #+#             */
+/*   Updated: 2023/10/31 09:51:55 by ousabbar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    if (!s)
-        return NULL;
-    size_t i = 0;
-    char k;
-    k = (unsigned char)c;
-    char *arr;
-    arr = (unsigned char *)s;
-    while (i < n)
-       arr[i++] = k;
-    
-}
-int main()
-{
-    size_t n = 5;
-    char arr[5];
-    ft_memset(arr, 2, n);
-    for (int i = 0; i < n; i++)
-    {
-        printf("arr[%d] = %d\n",i, arr[i]);
-    }
-    
+	size_t	i;
+	char	k;
+	char	*arr;
+
+	i = 0;
+	k = (unsigned char)c;
+	arr = (char *)s;
+	while (i < n)
+	{
+		arr[i] = k;
+		i++;
+	}
+	return (arr);
 }

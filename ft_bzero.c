@@ -1,25 +1,17 @@
-#include <libft.h>
-void ft_bzero(void *s, size_t n)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ousabbar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/10/31 09:20:57 by ousabbar          #+#    #+#             */
+/*   Updated: 2023/10/31 09:21:10 by ousabbar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+#include "libft.h"
+
+void	ft_bzero(void *s, size_t n)
 {
-    if (!s)
-        return ;
-    size_t i = 0;
-    int *arr;
-    
-    arr = (unsigned int*)s;
-    while (i < n)
-    {
-        arr[i++] = 0;
-    }
-}
-int main()
-{
-    int arr[5];
-    size_t n = 5;
-    ft_bzero(arr, n);
-    for (int i = 0; i < 5; i++)
-    {
-        printf("%d", arr[i]);
-    }
-    
+	ft_memset(s, 0, n);
 }

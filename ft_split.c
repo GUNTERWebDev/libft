@@ -35,7 +35,7 @@ int _strchar(char *s,char c)
     }
     return i;
 }
-char ** ft_strsplit(char const *s, char c)
+char ** ft_split(char const *s, char c)
 {
     int words_len = _strlen((char *)s, c);
     char **arr;
