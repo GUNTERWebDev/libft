@@ -1,17 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ousabbar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/02 09:47:20 by ousabbar          #+#    #+#             */
+/*   Updated: 2023/11/02 09:47:25 by ousabbar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd, &c, 1);
-}
-#include <stdio.h>
-#include <fcntl.h>
-#include <unistd.h>
-
-// Function declaration
-
-
-int main() {
-    // Open a file for writing (you can change the filename and mode as needed)
-    int fd = open("file.txt", O_WRONLY, 0644);
+	write(fd, &c, 1);
 }

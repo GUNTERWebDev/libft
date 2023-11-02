@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ousabbar <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/02 10:10:19 by ousabbar          #+#    #+#             */
+/*   Updated: 2023/11/02 10:10:24 by ousabbar         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 		write(fd, "-2147483648", 2);
@@ -17,16 +28,7 @@ void ft_putnbr_fd(int n, int fd)
 	}
 	else
 	{
-        n += '0';
-        write(fd, &n, 1);
-    }
-}
-int main()
-{
-    int fd = open("file.txt", O_WRONLY, 0644);
-    if (fd == -1)
-        return -1;
-    int str = 1933465527;
-    ft_putnbr_fd(str, fd);
-    close(fd);
+		n += '0';
+		write(fd, &n, 1);
+	}
 }
