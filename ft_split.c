@@ -16,7 +16,7 @@ int	word_count(char *s, char c)
 	int	i;
 	int	count;
 
-	count = 1;
+	count = 0;
 	i = 0;
 	while (s[i] == c && s[i])
 		i++;
