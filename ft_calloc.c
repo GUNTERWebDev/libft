@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ousabbar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/01 11:13:17 by ousabbar          #+#    #+#             */
-/*   Updated: 2023/11/01 11:13:23 by ousabbar         ###   ########.fr       */
+/*   Created: 2023/11/02 15:52:41 by ousabbar          #+#    #+#             */
+/*   Updated: 2023/11/02 15:52:45 by ousabbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	*ft_calloc(size_t count, size_t size)
 {
-	char	k;
+	void	*arr;
 
-	k = (char)c;
-	if (k >= 'a' && k <= 'z')
-		k -= 32;
-	return (k);
+	arr = malloc((size * count));
+	if (arr == 0)
+		return (arr);
+	ft_bzero(arr, count);
+	return (arr);
 }

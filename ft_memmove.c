@@ -13,12 +13,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*dest_cast;
-	size_t	i;
-	char	*s;
+	unsigned char	*dest_cast;
+	unsigned char	*s;
+	size_t			i;
 
-	s = (char *)src;
-	dest_cast = (char *)dest;
+	s = (unsigned char *)src;
+	dest_cast = (unsigned char *)dest;
 	i = 0;
 	if (!dest || !src)
 		return (NULL);
