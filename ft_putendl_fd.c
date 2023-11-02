@@ -7,5 +7,5 @@ void ft_putendl_fd(char const *s, int fd)
         write(fd, &s[i], 1);
         i++;
     }
-    ft_putchar('\n');
+    write(fd, "\n", 1);
 }
