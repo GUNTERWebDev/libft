@@ -17,11 +17,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	unsigned char	*s;
 	size_t			i;
 
+	if (!dest && !src)
+		return (NULL);
 	s = (unsigned char *)src;
 	dest_cast = (unsigned char *)dest;
 	i = 0;
-	if (!dest || !src)
-		return (NULL);
 	if (dest_cast <= s)
 	{
 		while (i < n)
