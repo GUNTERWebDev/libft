@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ousabbar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 11:16:34 by ousabbar          #+#    #+#             */
-/*   Updated: 2023/11/04 11:16:38 by ousabbar         ###   ########.fr       */
+/*   Created: 2023/11/04 15:27:15 by ousabbar          #+#    #+#             */
+/*   Updated: 2023/11/04 15:27:19 by ousabbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst)
+	if (lst && del)
 	{
-		if (*lst)
-			new->next = *lst;
-		*lst = new;
+		del(lst->content);
+		free(lst);
 	}
 }
