@@ -16,13 +16,11 @@ BONUS_OBJS		= $(BONUS:.c=.o)
 
 NAME			= libft.a
 
-CC				= gcc
-
 CFLAGS			= -Wall -Wextra -Werror
 
 RM				= rm -f
 
-AR				= ar rc
+AR				= ar -rc
 
 all: 			$(NAME)
 
@@ -35,7 +33,7 @@ clean:
 fclean: 		clean
 						$(RM) $(NAME)
 
-bonus:			$(OBJS) $(BONUS_OBJS)
+bonus:			$(BONUS_OBJS)
 						$(AR) $(NAME) $(BONUS_OBJS)
 
-re: 			fclean all
+re: 			fclean all bonus clean
