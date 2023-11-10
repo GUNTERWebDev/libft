@@ -6,12 +6,12 @@
 /*   By: ousabbar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 08:53:19 by ousabbar          #+#    #+#             */
-/*   Updated: 2023/11/01 08:53:22 by ousabbar         ###   ########.fr       */
+/*   Updated: 2023/11/10 20:58:10 by ousabbar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 

@@ -19,7 +19,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	while (ft_strchr(set, *s1) && *s1 != '\0')
 		s1++;
-	len_s1 = ft_strlen((char *)s1);
+	len_s1 = ft_strlen(s1);
 	while (ft_strchr(set, s1[len_s1]) && len_s1 != 0)
 		len_s1--;
 	return (ft_substr((char *)s1, 0, len_s1 + 1));

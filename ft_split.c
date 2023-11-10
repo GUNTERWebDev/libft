@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-word(char *s, char c)
+int	word(char *s, char c)
 {
 	int		i;
 	size_t	count;
@@ -31,7 +31,7 @@ word(char *s, char c)
 	return (count);
 }
 
-s_len(char const *s, char c)
+int	s_len(char const *s, char c)
 {
 	size_t	i;
 
