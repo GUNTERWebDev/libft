@@ -75,7 +75,7 @@ char	**ft_split(char const *s, char c)
 	char			**arr;
 	unsigned int	i;
 
-	if (!s && !c)
+	if (!s || !c)
 		return (NULL);
 	words_count = word((char *)s, c);
 	arr = (char **) ft_calloc(1, sizeof(char *) * (words_count + 1));
